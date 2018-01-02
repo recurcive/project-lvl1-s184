@@ -1,4 +1,7 @@
-h1 Project Brain Games
+# Project Brain Games
 
-h2 Setup
+## Setup
+
+```
 make install
+```
