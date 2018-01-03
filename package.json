@@ -9,16 +9,23 @@
   "scripts": {
     "babel-node": "babel-node",
     "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "eslint": "eslint"
   },
   "author": "Dmitry",
   "license": "ISC",
+  "dependencies": {
+    "readline-sync": "*"
+  },
   "devDependencies": {
     "babel-cli": "*",
     "babel-core": "*",
-    "babel-preset-env":  "*",
-    "babel-preset-stage-0":  "*",
-    "readline-sync": "*"
+    "babel-preset-env": "*",
+    "babel-preset-stage-0": "*",
+    "eslint": "*",
+    "eslint-config-airbnb-base": "*",
+    "eslint-plugin-import": "*",
+    "babel-eslint": "*"
   },
   "files": [
     "dist"
