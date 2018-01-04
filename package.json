@@ -1,6 +1,6 @@
 {
   "name": "brain-games-dm",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "BrainGames.Hexlet.practise",
   "main": "index.js",
   "bin": {
