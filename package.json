@@ -1,11 +1,12 @@
 {
   "name": "brain-games-dm",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "BrainGames.Hexlet.practise",
   "main": "index.js",
   "bin": {
     "brain-games": "dist/bin/brain-games.js",
-    "brain-even": "dist/bin/brain-even.js"
+    "brain-even": "dist/bin/brain-even.js",
+    "brain-calc": "dist/bin/brain-calc.js"
   },
   "scripts": {
     "babel-node": "babel-node",
