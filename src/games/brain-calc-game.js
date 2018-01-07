@@ -1,9 +1,10 @@
-#!/usr/bin/env node
+import { cons } from 'hexlet-pairs';
 import * as common from '../games/common';
+import runGame from '..';
 
 
 const CALC_RULE = 'What is the result of the expression?';
-
+const operatorArray = ['+', '-', '*'];
 const MAX_VALUE = 101;
 
 const calculate = (num1, num2, operator) => {
@@ -19,21 +20,16 @@ const calculate = (num1, num2, operator) => {
   }
 };
 
-const engine = () => {
-  const operatorArray = ['+', '-', '*'];
+const generateData = () => {
   const num1 = common.getRandom(MAX_VALUE);
   const num2 = common.getRandom(MAX_VALUE);
   const operator = operatorArray[common.getRandom(operatorArray.length)];
-  const expression = `${num1} ${operator} ${num2}`;
 
-  console.log(`Question: ${expression}`);
-  const value = calculate(num1, num2, operator);
-  console.log(`res -> ${value}`);
-  return value;
+  return cons(`${num1} ${operator} ${num2}`, calculate(num1, num2, operator));
 };
 
 const checkCalculate = () => {
-  common.runGame(CALC_RULE, engine);
+  runGame(CALC_RULE, generateData);
 };
 
 export default checkCalculate;
