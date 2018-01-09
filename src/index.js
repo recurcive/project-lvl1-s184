@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import { car, cdr } from 'hexlet-pairs';
+import { car, cdr, toString } from 'hexlet-pairs';
 
 
 const MAX_ATTEMP = 3;
@@ -32,7 +32,6 @@ const runGame = (ruleText, getValue) => {
       return;
     }
     const pair = getValue();
-    pair.toString();
     console.log(`Question: ${car(pair)}`);
     const answer = readlineSync.question('Your answer: ');
     const res = isAnswerCorrect(cdr(pair), answer);
