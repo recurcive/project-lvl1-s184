@@ -5,13 +5,18 @@ import runGame from '..';
 
 const PRIME_RULE = 'Is this number prime?';
 
-const isPrime = (random) => {
-  if (random <= 2) {
+const isEven = value => value % 2 === 0;
+
+const isPrime = (value) => {
+  if (value <= 2) {
     return true;
   }
-  const maxDivider = Math.ceil(Math.sqrt(random));
+  if (isEven(value)) {
+    return false;
+  }
+  const maxDivider = Math.ceil(Math.sqrt(value));
   const stepIter = (divider) => {
-    if (random % divider === 0) {
+    if (value % divider === 0) {
       return false;
     }
     if (divider >= maxDivider) {
