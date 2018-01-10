@@ -5,13 +5,12 @@ import runGame from '..';
 
 const PRIME_RULE = 'Is this number prime?';
 
-const isEven = value => value % 2 === 0;
 
 const isPrime = (value) => {
   if (value <= 2) {
     return true;
   }
-  if (isEven(value)) {
+  if (value < 0 || common.isEven(value)) {
     return false;
   }
   const maxDivider = Math.ceil(Math.sqrt(value));

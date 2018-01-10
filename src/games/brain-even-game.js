@@ -5,16 +5,9 @@ import runGame from '..';
 
 const EVEN_RULE = 'Answer "yes" if number even otherwise answer "no".';
 
-const isEven = (value) => {
-  if ((value % 2) === 0) {
-    return 'yes';
-  }
-  return 'no';
-};
-
 const generateData = () => {
   const value = common.getRandom();
-  return cons(value, isEven(value));
+  return cons(value, common.isEven(value) ? 'yes' : 'no');
 };
 
 const checkEvenNumber = () => {
