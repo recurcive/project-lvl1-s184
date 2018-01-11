@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import { car, cdr, toString } from 'hexlet-pairs';
+import { car, cdr } from 'hexlet-pairs';
 
 
 const MAX_ATTEMP = 3;
